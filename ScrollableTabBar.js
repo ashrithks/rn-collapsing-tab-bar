@@ -1,7 +1,7 @@
 const React = require('react');
 //const { ViewPropTypes } = ReactNative = require('react-native');
 
-const {
+import {
   View,
   Animated,
   StyleSheet,
@@ -10,7 +10,7 @@ const {
   Platform,
   Dimensions,
   I18nManager
-} = ReactNative;
+} from  'react-native';
 const Button = require('./Button');
 
 const WINDOW_WIDTH = Dimensions.get('window').width;

@@ -5,7 +5,7 @@ const {
 } = React;
 //const { ViewPropTypes } = ReactNative = require('react-native');
 
-const {
+import {
 	Dimensions,
 	View,
 	Animated,
@@ -13,7 +13,7 @@ const {
 	StyleSheet,
 	InteractionManager,
 	Platform
-} = ReactNative;
+} from 'react-native';
 const TimerMixin = require('react-timer-mixin');
 
 const SceneComponent = require('./SceneComponent');
