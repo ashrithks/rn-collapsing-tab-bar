@@ -37,7 +37,7 @@ var App = React.createClass({
 For Collapsing tabbar, see CollapseExample in example folder.
 DEMO
 ```
-![Demo](https://user-images.githubusercontent.com/19853363/37207896-1192f2e6-23c5-11e8-9d53-c63eebb45bac.gif)
+![Demo](https://user-images.githubusercontent.com/19853363/37208053-e784dd06-23c5-11e8-81dd-a21883c8536b.gif)
 
 
 ## Injecting a custom tab bar
