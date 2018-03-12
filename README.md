@@ -1,5 +1,6 @@
 
 ## rn-collapsing-tab-bar
+## For Collapsing tabbar, see CollapseExample in example folder.
 This is probably my favorite navigation pattern on Android, I wish it
 were more common on iOS! This is a very simple JavaScript-only
 implementation of it for React Native. For more information about how
@@ -34,7 +35,6 @@ var App = React.createClass({
 ```
 
 ```
-For Collapsing tabbar, see CollapseExample in example folder.
 DEMO
 ```
 ![Demo](https://user-images.githubusercontent.com/19853363/37208053-e784dd06-23c5-11e8-81dd-a21883c8536b.gif)
