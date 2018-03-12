@@ -1,6 +1,12 @@
 
 ## rn-collapsing-tab-bar
 ## For Collapsing tabbar, see CollapseExample in example folder.
+## Expo Link
+
+```
+https://snack.expo.io/By0FEomKf
+
+```
 This is probably my favorite navigation pattern on Android, I wish it
 were more common on iOS! This is a very simple JavaScript-only
 implementation of it for React Native. For more information about how
