@@ -51,7 +51,7 @@ const ScrollableTabView = createReactClass({
 			page: -1,
 			onChangeTab: () => { },
 			onScroll: () => { },
-            		onContinerScroll: () => { },
+            		onContainerScroll: () => { },
 			contentProps: {},
 			scrollWithoutAnimation: false,
 			locked: false,
