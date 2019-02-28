@@ -312,6 +312,7 @@ const ScrollableTabView = createReactClass({
 					}
 				}
 			}}
+			onScrollEndDrag={event => { this.contentScrollDistance = event.nativeEvent.contentOffset.y; }}
 			refreshControl={this.props.refreshControl ? this.props.refreshControl : null}
 			scrollEventThrottle={16}
 			stickyHeaderIndices={this.props.collapsableBar ? [1] : []}>
