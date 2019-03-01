@@ -4,7 +4,7 @@ import {
   View,
 } from 'react-native';
 
-import ScrollableTabView, { ScrollableTabBar, } from 'react-native-scrollable-tab-view';
+import ScrollableTabView, { ScrollableTabBar, } from 'rn-collapsing-tab-bar';
 
 export default () => {
   return <ScrollableTabView
