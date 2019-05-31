@@ -9,8 +9,9 @@ import {
   ScrollView,
   Text,
   Platform,
-  Dimensions
-} from 'react-native';
+  Dimensions,
+  I18nManager
+} from  'react-native';
 const Button = require('./Button');
 
 const WINDOW_WIDTH = Dimensions.get('window').width;
@@ -157,8 +158,9 @@ const ScrollableTabBar = createReactClass({
       bottom: 0
     };
 
+    const key = I18nManager.isRTL ? 'right' : 'left';
     const dynamicTabUnderline = {
-      left: this.state._leftTabUnderline,
+      [`${key}`]: this.state._leftTabUnderline,
       width: this.state._widthTabUnderline
     };
 
