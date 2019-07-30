@@ -280,15 +280,17 @@ const ScrollableTabView = createReactClass({
 			ref: this._children()[currentPage],
 			from: prevPage,
 		});
+		let { scrollToTopAnimation } = this.props;
 		if (this.props.collapsableBar) {
-			setTimeout(() => {
+			let timeoutId = setTimeout(() => {
 				try {
 					if (this.state.collapseScrollHeight > this.state.collapseHeight + (this.props.tabBarHeight ? this.props.tabBarHeight : 50)) {
-						this.collapseRef.scrollTo({ x: 0, y: this.state.collapseHeight, animated: true })
+						this.collapseRef.scrollTo({ x: 0, y: this.state.collapseHeight, animated: scrollToTopAnimation });
 					}
 				} catch (error) {
 
 				}
+				clearTimeout(timeoutId);
 			}, 0);
 		}
 	},
@@ -362,9 +364,10 @@ const ScrollableTabView = createReactClass({
 				ref={(comp) => { this.collapseRef = comp }}
 				pointerEvents={'box-none'}
 				onScroll={this.handleCollapseScroll}
+				scrollEventThrottle={16}
 				refreshControl={this.props.refreshControl ? this.props.refreshControl : null}
 				style={[styles.container, this.props.style,]}
-				contentContainerStyle={{ maxHeight: this.state.collapseHeight + (this.props.tabBarHeight ? this.props.tabBarHeight : 50) + this.state.contentHeight[this.state.currentPage] }}
+				contentContainerStyle={{ maxHeight: this.state.collapseHeight + (this.props.tabBarHeight ? this.props.tabBarHeight : 50) + (this.state.contentHeight[this.state.currentPage] || 0) }}
 				onLayout={this._handleLayout}
 				stickyHeaderIndices={[1]}
 				scrollEnabled={this.props.scrollEnabled}
