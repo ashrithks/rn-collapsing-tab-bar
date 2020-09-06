@@ -84,7 +84,7 @@ const ScrollableTabView = createReactClass({
 		};
 	},
 
-	componentWillReceiveProps(props) {
+	UNSAFE_componentWillReceiveProps(props) {
 		if (props.children !== this.props.children) {
 			this.updateSceneKeys({ page: this.state.currentPage, children: props.children, });
 		}
@@ -96,7 +96,6 @@ const ScrollableTabView = createReactClass({
 			this.changeContentHeight(props.tabContentHeights)
 		}
 	},
-
 	componentWillUnmount() {
 		this.state.scrollXIOS.removeAllListeners();
 	},
@@ -104,7 +103,7 @@ const ScrollableTabView = createReactClass({
 	goToPage(pageNumber) {
 		const offset = pageNumber * this.state.containerWidth;
 		if (this.scrollView) {
-			this.scrollView.getNode().scrollTo({ x: offset, y: 0, animated: !this.props.scrollWithoutAnimation, });
+			this.scrollView.scrollTo({ x: offset, y: 0, animated: !this.props.scrollWithoutAnimation, });
 		}
 		const currentPage = this.state.currentPage;
 		this.updateSceneKeys({
